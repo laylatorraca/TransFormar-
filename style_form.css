@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 50%;
+    padding: 20px;
+}
+
+h1{
+    width: 100%;
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-family: Poppins;
+}
+
+.registro{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+p{
+    font-family: Poppins;
+    font-size: 18px;
+}
+
+.registre-se{
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 18px;
+    color: #F72585;
+}
+
+.row{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(300px, 1fr));
+}
+
+.col{
+    position: relative;
+    width: 100%;
+    padding: 30px;
+}
+
+.inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: black;
+    padding: 50px;
+}
+
+input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: black;
+    text-decoration: underline;
+}
+
+text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18;
+    display: block;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.container .row .inputBox input:focus + .text,
+.container .row .inputBox input:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+
+.container .row .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.container .row .inputBox input:focus ~ .line,
+.container .row .inputBox input:valid ~ .line{
+    height: 100%;
+}
+
+.fim{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.senha{
+    color: black;
+    text-align: left;
+    margin-left: 80px;
+}
+
+button{
+    width: 75%;
+    height: 40px;
+    background: #F72585;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+button:hover{
+    background: #1E6091;
+    cursor: pointer;
+}
